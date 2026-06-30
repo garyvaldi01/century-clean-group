@@ -108,8 +108,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   height: 3px;
   background: var(--accent-gradient);
   z-index: 10000;
-  transition: width 0.1s linear;
+  transition: width 0.1s linear, opacity 0.5s ease;
   box-shadow: 0 0 10px rgba(0,180,216,0.5);
+  opacity: 0;
+}
+
+.scroll-progress.visible {
+  opacity: 1;
 }
 
 /* ============================================
@@ -980,6 +985,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 /* Accessibility */
+@media (max-width: 767px) {
+  .immerse-bg { background-attachment: scroll !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-rotate { opacity: 1 !important; transform: none !important; }
