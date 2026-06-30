@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Century Clean Group — Gestión y Mantenimiento Premium de Propiedades</title>
+<meta name="description" content="Century Clean Group redefine el cuidado de propiedades en Santo Domingo. Administración, mantenimiento y presentación con estándares de clase mundial."/>
+<meta property="og:title" content="Century Clean Group — Premium Property Solutions"/>
+<meta property="og:description" content="Redefiniendo el cuidado de propiedades en Santo Domingo."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://century-clean-group.vercel.app"/>
+<meta name="theme-color" content="#FFFFFF"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="css/global.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ==========================================
+     LOADER
+     ========================================== -->
+<div class="loader" id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">Century Clean<span style="color:var(--accent-primary);">.</span></div>
+    <div class="loader-spinner"></div>
+  </div>
+</div>
+
+<!-- ==========================================
+     NAVIGATION
+     ========================================== -->
+<nav class="nav" id="nav">
+  <div class="nav-backdrop"></div>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-text">Century Clean</span>
+      <span class="nav-logo-dot"></span>
+    </a>
+    <div class="nav-links">
+      <a href="pages/servicios/" class="nav-link">Servicios</a>
+      <a href="pages/portafolio/" class="nav-link">Portafolio</a>
+      <a href="pages/nosotros/" class="nav-link">Nosotros</a>
+      <a href="pages/contacto/" class="nav-link">Contacto</a>
+    </div>
+    <div class="nav-actions">
+      <a href="pages/contacto/" class="btn btn-primary nav-cta">Cotizar</a>
+      <button class="nav-hamburger" id="menuToggle" aria-label="Menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ==========================================
+     MOBILE MENU
+     ========================================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose" aria-label="Cerrar menú">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <a class="mobile-menu-link" href="pages/servicios/" style="transition-delay:0.1s">Servicios</a>
+  <a class="mobile-menu-link" href="pages/portafolio/" style="transition-delay:0.2s">Portafolio</a>
+  <a class="mobile-menu-link" href="pages/nosotros/" style="transition-delay:0.3s">Nosotros</a>
+  <a class="mobile-menu-link" href="pages/contacto/" style="transition-delay:0.4s">Contacto</a>
+  <a class="mobile-menu-link mobile-menu-cta" href="pages/contacto/" style="transition-delay:0.5s">Solicitar Cotización</a>
+</div>
+
+<main>
+
+<!-- ==========================================
+     HERO — Cinematic Entry
+     ========================================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-line"></div>
+
+  <!-- Parallax floating shapes -->
+  <div class="hero-float-shape hero-float-shape-1 hero-parallax-layer" data-speed="0.08"></div>
+  <div class="hero-float-shape hero-float-shape-2 hero-parallax-layer" data-speed="-0.05"></div>
+  <div class="hero-float-shape hero-float-shape-3 hero-parallax-layer" data-speed="0.12"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="hero-tag-line"></span>
+      <span class="hero-tag-text">Santo Domingo · Rep. Dominicana</span>
+    </div>
+
+    <h1 class="h1">
+      Cuidamos tu propiedad<br/>
+      como si fuera <span class="text-gradient italic" id="heroMorphWord">nuestra.</span>
+    </h1>
+
+    <p class="body-lg hero-subtitle">
+      Administración, mantenimiento y presentación de propiedades con estándares de clase mundial. <span id="typingTarget"></span><span class="typing-cursor" id="typingCursor"></span>
+    </p>
+
+    <div class="hero-actions">
+      <a href="pages/contacto/" class="btn btn-primary magnetic-wrap">
+        Solicitar Cotización
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+      <a href="pages/servicios/" class="btn btn-secondary magnetic-wrap">Ver Servicios</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ==========================================
+     STATS — Animated Metrics
+     ========================================== -->
+<section style="background:var(--bg-secondary);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+  <div class="container" style="padding:32px 0;">
+    <div class="grid-4" style="gap:12px;">
+      <div class="stat-item reveal stagger-1">
+        <div class="stat-number" data-target="150" data-suffix="+">—</div>
+        <div class="stat-label">Propiedades Atendidas</div>
+      </div>
+      <div class="stat-item reveal stagger-2">
+        <div class="stat-number" data-target="98" data-suffix="%">—</div>
+        <div class="stat-label">Satisfacción</div>
+      </div>
+      <div class="stat-item reveal stagger-3">
+        <div class="stat-number" data-target="5" data-suffix="">—</div>
+        <div class="stat-label">Años de Experiencia</div>
+      </div>
+      <div class="stat-item reveal stagger-4">
+        <div class="stat-number" data-target="24" data-suffix="/7">—</div>
+        <div class="stat-label">Disponibilidad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     ABOUT — Vision
+     ========================================== -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;">
+      <div class="reveal-left">
+        <div class="label-sm">Nuestra Visión</div>
+        <h2 class="h2" style="margin-bottom:var(--space-lg);">
+          Una nueva forma de cuidar<br/>
+          <span class="text-gradient italic">propiedades.</span>
+        </h2>
+        <p class="body-lg" style="margin-bottom:var(--space-md);">
+          Century Clean Group nace con la visión de transformar el mantenimiento de propiedades en una experiencia premium. No se trata solo de limpiar — se trata de preservar valor, proteger inversiones y elevar estándares.
+        </p>
+        <p class="body-md" style="margin-bottom:var(--space-xl);">
+          Cada propiedad que atendemos recibe el mismo nivel de precisión y cuidado que un hotel cinco estrellas. Porque creemos que los espacios donde vivimos y trabajamos merecen excelencia.
+        </p>
+        <a href="pages/nosotros/" class="btn btn-secondary">
+          Conocer Más
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+      <div class="reveal-right">
+        <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);box-shadow:var(--shadow-lg);">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85" alt="Interior de propiedad de lujo" loading="lazy" style="width:100%;height:480px;object-fit:cover;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     SERVICES — Modern Cards with Icons
+     ========================================== -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label-sm">Nuestros Servicios</div>
+      <h2 class="h2">
+        Soluciones premium<br/>
+        <span class="text-gradient italic">para cada necesidad.</span>
+      </h2>
+    </div>
+
+    <div class="grid-2">
+      <div class="svc-card reveal stagger-1">
+        <div class="svc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h3>Administración de Propiedades</h3>
+        <p>Gestión integral que cuida y preserva el valor de su inversión inmobiliaria con monitoreo continuo, reportes mensuales y atención profesional 24/7.</p>
+        <a href="pages/administracion/" class="btn btn-ghost">Saber más →</a>
+      </div>
+
+      <div class="svc-card reveal stagger-2">
+        <div class="svc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Gestión Airbnb</h3>
+        <p>Preparación y mantenimiento para propiedades de corta estancia. Check-in exprés, lencería hotelera y amenities premium para huéspedes exigentes.</p>
+        <a href="pages/airbnb/" class="btn btn-ghost">Saber más →</a>
+      </div>
+
+      <div class="svc-card reveal stagger-3">
+        <div class="svc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3>Limpieza Post-Construcción</h3>
+        <p>Eliminación técnica de residuos de obra con protocolos profesionales. Entregamos propiedades en condiciones impecables, listas para habitar.</p>
+        <a href="pages/servicios/" class="btn btn-ghost">Saber más →</a>
+      </div>
+
+      <div class="svc-card reveal stagger-4">
+        <div class="svc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3>Presentación de Propiedades</h3>
+        <p>Preparación visual y técnica para venta o alquiler. Home staging, styling profesional que maximiza el valor percibido de cada propiedad.</p>
+        <a href="pages/servicios/" class="btn btn-ghost">Saber más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     PROCESS / TIMELINE — Animated Steps
+     ========================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal" style="margin:0 auto;margin-bottom:var(--space-3xl);">
+      <div class="label-sm">Cómo Trabajamos</div>
+      <h2 class="h2">
+        Un proceso diseñado para<br/>
+        <span class="text-gradient italic">resultados excepcionales.</span>
+      </h2>
+    </div>
+
+    <div class="grid-2" style="max-width:860px;margin:0 auto;align-items:start;">
+      <div class="timeline reveal stagger-1">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">01</div>
+          <div class="timeline-title">Consulta y Diagnóstico</div>
+          <div class="timeline-text">Evaluamos su propiedad, identificamos necesidades y diseñamos un plan de servicio personalizado.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">02</div>
+          <div class="timeline-title">Propuesta Transparente</div>
+          <div class="timeline-text">Presentamos una propuesta clara con alcance, tiempos y costos. Sin sorpresas.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">03</div>
+          <div class="timeline-title">Ejecución Premium</div>
+          <div class="timeline-text">Nuestro equipo ejecuta el servicio siguiendo protocolos de calidad de nivel hotelero.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-number">04</div>
+          <div class="timeline-title">Verificación y Seguimiento</div>
+          <div class="timeline-text">Inspeccionamos cada detalle y damos seguimiento continuo para garantizar resultados duraderos.</div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="card card-accent" style="padding:var(--space-xl);">
+          <div style="display:flex;gap:12px;margin-bottom:var(--space-md);align-items:center;">
+            <div class="diff-icon" style="width:40px;height:40px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <span style="font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-primary);">Garantía</span>
+          </div>
+          <h3 style="font-size:1.125rem;margin-bottom:var(--space-sm);">Resultados garantizados</h3>
+          <p class="body-md">
+            No damos un servicio por terminado hasta que cada detalle cumpla con nuestros estándares. Su satisfacción es nuestra reputación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FEATURED PROJECTS — Image Cards
+     ========================================== -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label-sm">Proyectos Destacados</div>
+      <h2 class="h2">
+        Resultados que <span class="text-gradient italic">hablan solos.</span>
+      </h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="img-card reveal stagger-1">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=85" alt="Restauración de mármol" loading="lazy"/>
+        <div class="img-card-overlay">
+          <span>Restauración</span>
+          <h3>Pulido y Cristalizado</h3>
+        </div>
+      </div>
+
+      <div class="img-card reveal stagger-2">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb4b3b2?w=600&q=85" alt="Limpieza post construcción" loading="lazy"/>
+        <div class="img-card-overlay">
+          <span>Post-Obra</span>
+          <h3>Limpieza Técnica</h3>
+        </div>
+      </div>
+
+      <div class="img-card reveal stagger-3">
+        <img src="https://images.unsplash.com/photo-1615571022219-eb45cf7faa36?w=600&q=85" alt="Airbnb premium" loading="lazy"/>
+        <div class="img-card-overlay">
+          <span>Airbnb</span>
+          <h3>Staging Vacacional</h3>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:var(--space-2xl);" class="reveal">
+      <a href="pages/portafolio/" class="btn btn-secondary">Ver Portafolio Completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     BEFORE / AFTER — Visual Comparator
+     ========================================== -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:var(--space-3xl);">
+      <div class="reveal-left">
+        <div class="label-sm">Antes / Después</div>
+        <h2 class="h2" style="margin-bottom:var(--space-lg);">
+          Transformaciones que<br/>
+          <span class="text-gradient italic">se ven reales.</span>
+        </h2>
+        <p class="body-lg" style="margin-bottom:var(--space-xl);">
+          Desliza para comparar. Cada proyecto demuestra nuestro compromiso con la excelencia y la atención al detalle.
+        </p>
+        <div style="display:flex;gap:var(--space-xl);">
+          <div>
+            <div style="font-size:2rem;font-weight:700;color:var(--accent-primary);">100%</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary);">Calidad Garantizada</div>
+          </div>
+          <div>
+            <div style="font-size:2rem;font-weight:700;color:var(--accent-primary);">24h</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary);">Tiempo de Respuesta</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="before-after-container">
+          <div class="image-before" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=85');"></div>
+          <div class="image-after" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85');clip-path:inset(0 0 0 50%);"></div>
+          <div class="slider-handle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     TESTIMONIALS — Elegant Carousel
+     ========================================== -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:var(--space-xl);">
+      <div class="label-sm">Testimonios</div>
+      <h2 class="h2">
+        Lo que dicen <span class="text-gradient italic">nuestros clientes.</span>
+      </h2>
+    </div>
+  </div>
+
+  <div style="overflow:hidden;padding:0 var(--space-md);">
+    <div class="flex gap-4" id="testimonialTrack" style="width:max-content;transition:transform 0.1s linear;cursor:grab;">
+      <div class="testimonial-card reveal" style="max-width:380px;">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Transformaron completamente la presentación de mi propiedad. El nivel de detalle y profesionalismo es exactamente lo que buscaba."</p>
+        <p class="testimonial-author">María Fernanda Torres</p>
+        <p class="testimonial-role">Propietaria, Villa Serenity</p>
+      </div>
+      <div class="testimonial-card reveal stagger-1" style="max-width:380px;">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"La gestión Airbnb que realizan es impecable. Mis huéspedes siempre destacan lo impecable que encuentran la propiedad."</p>
+        <p class="testimonial-author">Carlos Mendoza</p>
+        <p class="testimonial-role">Inversionista Inmobiliario</p>
+      </div>
+      <div class="testimonial-card reveal stagger-2" style="max-width:380px;">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Profesionalismo y atención al detalle excepcionales. Nuestras oficinas nunca habían lucido tan impecables."</p>
+        <p class="testimonial-author">Ana Lucía Reyes</p>
+        <p class="testimonial-role">Directora de Operaciones</p>
+      </div>
+      <div class="testimonial-card reveal stagger-3" style="max-width:380px;">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Contraté el servicio post-construcción y quedé impresionado. Dejaron todo impecable, como nuevo."</p>
+        <p class="testimonial-author">Roberto Castillo</p>
+        <p class="testimonial-role">Desarrollador Inmobiliario</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     DIFFERENTIATORS — Why Choose Us
+     ========================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal" style="margin:0 auto;margin-bottom:var(--space-3xl);">
+      <div class="label-sm">Por Qué Elegirnos</div>
+      <h2 class="h2">
+        Lo que nos hace <span class="text-gradient italic">diferentes.</span>
+      </h2>
+    </div>
+
+    <div class="grid-2" style="max-width:740px;margin:0 auto;gap:var(--space-md);">
+      <div class="diff-card reveal stagger-1">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Proceso Transparente</h4>
+          <p>Cada paso del servicio es claro y comunicado. Sin sorpresas, sin letra pequeña.</p>
+        </div>
+      </div>
+
+      <div class="diff-card reveal stagger-2">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Respuesta Rápida</h4>
+          <p>Respondemos consultas en menos de 24 horas hábiles.</p>
+        </div>
+      </div>
+
+      <div class="diff-card reveal stagger-3">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Calidad Garantizada</h4>
+          <p>Si no está satisfecho, lo resolvemos. Su satisfacción es nuestra prioridad.</p>
+        </div>
+      </div>
+
+      <div class="diff-card reveal stagger-4">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Productos Premium</h4>
+          <p>Productos de alta calidad que protegen superficies y el medio ambiente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FAQ — Accordion
+     ========================================== -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container" style="max-width:680px;">
+    <div class="text-center reveal" style="margin-bottom:var(--space-2xl);">
+      <div class="label-sm">Preguntas Frecuentes</div>
+      <h2 class="h2">Todo lo que <span class="text-gradient italic">necesitas saber.</span></h2>
+    </div>
+
+    <div class="faq-item reveal stagger-1">
+      <div class="faq-question">
+        <span>¿Qué tipos de propiedades atienden?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Trabajamos con residencias de lujo, apartamentos, torres corporativas, propiedades Airbnb y proyectos post-construcción. Cada propiedad recibe un plan personalizado.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal stagger-2">
+      <div class="faq-question">
+        <span>¿Cuál es su área de cobertura?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Operamos en Santo Domingo y sus alrededores. Para propiedades fuera del área metropolitana, consúltenos para evaluar disponibilidad.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal stagger-3">
+      <div class="faq-question">
+        <span>¿Ofrecen servicios recurrentes o puntuales?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Ambos. Desde servicios puntuales hasta programas de mantenimiento recurrente semanal, quincenal o mensual.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal stagger-4">
+      <div class="faq-question">
+        <span>¿Cuánto toma recibir una cotización?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Respondemos todas las solicitudes en menos de 24 horas hábiles. Para propiedades complejas, coordinamos una visita técnica sin costo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CTA FINAL — Modern Contact
+     ========================================== -->
+<section class="section" style="background:var(--bg-dark);color:var(--text-inverse);">
+  <div class="container text-center" style="max-width:640px;">
+    <div class="reveal">
+      <div class="label-sm" style="color:var(--accent-primary);">Contáctenos</div>
+      <h2 class="h2" style="margin-bottom:var(--space-lg);color:var(--text-inverse);">
+        ¿Listo para cuidar tu propiedad con<br/>
+        <span style="color:var(--accent-primary);">los mejores estándares?</span>
+      </h2>
+      <p class="body-lg" style="margin-bottom:var(--space-2xl);max-width:440px;margin-left:auto;margin-right:auto;color:var(--text-tertiary);">
+        Te responderemos en menos de 24 horas con una propuesta personalizada.
+      </p>
+      <div class="flex" style="justify-content:center;gap:var(--space-md);flex-wrap:wrap;">
+        <a href="pages/contacto/" class="btn btn-primary">
+          Solicitar Cotización
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/15196947722" target="_blank" class="btn" style="background:rgba(255,255,255,0.1);color:var(--text-inverse);border:1px solid rgba(255,255,255,0.2);">
+          WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-text">
+          Century Clean
+          <span class="nav-logo-dot"></span>
+        </div>
+        <p class="footer-desc">Soluciones premium de administración, mantenimiento y presentación de propiedades en Santo Domingo.</p>
+      </div>
+      <div>
+        <h5 class="footer-heading">Servicios</h5>
+        <ul class="footer-links">
+          <li><a class="footer-link" href="pages/administracion/">Administración de Propiedades</a></li>
+          <li><a class="footer-link" href="pages/airbnb/">Gestión Airbnb</a></li>
+          <li><a class="footer-link" href="pages/servicios/">Limpieza Post-Construcción</a></li>
+          <li><a class="footer-link" href="pages/servicios/">Presentación de Propiedades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-heading">Compañía</h5>
+        <ul class="footer-links">
+          <li><a class="footer-link" href="pages/nosotros/">Nosotros</a></li>
+          <li><a class="footer-link" href="pages/portafolio/">Portafolio</a></li>
+          <li><a class="footer-link" href="pages/blog/">Blog</a></li>
+          <li><a class="footer-link" href="pages/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-heading">Contacto</h5>
+        <ul class="footer-links">
+          <li><span class="footer-link">info@Centurycleangroup.com</span></li>
+          <li><span class="footer-link">+1 (519) 694-7722</span></li>
+          <li><span class="footer-link" style="font-size:0.9rem;">Santo Domingo, R.D.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2025 Century Clean Group S.R.L.</span>
+      <div style="display:flex;gap:var(--space-lg);">
+        <a class="footer-link" href="#" style="font-size:0.85rem;">Privacidad</a>
+        <a class="footer-link" href="#" style="font-size:0.85rem;">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/15196947722" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/global.js"></script>
+</body>
+</html>

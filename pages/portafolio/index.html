@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Portafolio | Century Clean Group</title>
+<meta name="description" content="Galería de proyectos de saneamiento premium, restauración de mármol y preparación de propiedades de lujo en Santo Domingo."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="../../favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../../logo.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../css/global.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-backdrop"></div>
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">
+      <span class="nav-logo-text">Century Clean</span>
+      <span class="nav-logo-dot"></span>
+    </a>
+    <div class="nav-links">
+      <a href="../../pages/servicios/" class="nav-link">Servicios</a>
+      <a href="../../pages/portafolio/" class="nav-link active">Portafolio</a>
+      <a href="../../pages/nosotros/" class="nav-link">Nosotros</a>
+      <a href="../../pages/contacto/" class="nav-link">Contacto</a>
+    </div>
+    <div class="nav-actions">
+      <a href="../../pages/contacto/" class="btn btn-primary nav-cta">Cotizar</a>
+      <button class="nav-hamburger" id="menuToggle" aria-label="Menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose" aria-label="Cerrar menú">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <a class="mobile-menu-link" href="../../pages/servicios/" style="transition-delay:0.1s">Servicios</a>
+  <a class="mobile-menu-link" href="../../pages/portafolio/" style="transition-delay:0.2s">Portafolio</a>
+  <a class="mobile-menu-link" href="../../pages/nosotros/" style="transition-delay:0.3s">Nosotros</a>
+  <a class="mobile-menu-link" href="../../pages/contacto/" style="transition-delay:0.4s">Contacto</a>
+  <a class="mobile-menu-link mobile-menu-cta" href="../../pages/contacto/" style="transition-delay:0.5s">Solicitar Cotización</a>
+</div>
+
+<main>
+
+<!-- ==========================================
+     HERO SUBPAGE
+     ========================================== -->
+<section class="subpage-hero">
+  <div class="container">
+    <div class="label-sm reveal">Galería de Proyectos</div>
+    <div style="display:flex;flex-direction:column;gap:20px;" class="reveal stagger-1">
+      <h1 class="h1" style="max-width:640px;">
+        Resultados que <span class="gold-text italic">hablan solos.</span>
+      </h1>
+      <p class="body-lg" style="max-width:440px;">
+        Cada proyecto es una huella de nuestro compromiso con la excelencia. Explore nuestras categorías de servicio premium.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FILTERS + GALLERY
+     ========================================== -->
+<section class="section" style="padding-top:clamp(48px,6vw,80px);">
+  <div class="container">
+
+    <!-- Filter Chips -->
+    <div class="portfolio-filters reveal" id="portfolioFilters">
+      <button class="filter-chip active" data-filter="all">Todos</button>
+      <button class="filter-chip" data-filter="restauracion">Restauración</button>
+      <button class="filter-chip" data-filter="post-obra">Post-Obra</button>
+      <button class="filter-chip" data-filter="airbnb">Airbnb</button>
+      <button class="filter-chip" data-filter="presentacion">Presentación</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <div class="portfolio-item reveal-scale stagger-1" data-category="restauracion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Pulido de Mármol" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Restauración</span>
+            <h3>Pulido de Mármol</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-2" data-category="post-obra">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb4b3b2?w=600&q=80" alt="Limpieza Post-Obra" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Post-Obra</span>
+            <h3>Eliminación de Residuos</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-3" data-category="airbnb">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1615571022219-eb45cf7faa36?w=600&q=80" alt="Airbnb Premium" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Airbnb</span>
+            <h3>Staging Vacacional</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-4" data-category="presentacion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Home Staging" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Presentación</span>
+            <h3>Home Staging</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-5" data-category="restauracion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Cristalizado" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Restauración</span>
+            <h3>Cristalizado de Granito</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-6" data-category="post-obra">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Obra Nueva" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Post-Obra</span>
+            <h3>Limpieza Final de Obra</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-1" data-category="airbnb">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Suite Ejecutiva" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Airbnb</span>
+            <h3>Suite Ejecutiva</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-2" data-category="presentacion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80" alt="Villa de Lujo" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Presentación</span>
+            <h3>Villa de Lujo</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-3" data-category="restauracion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Restauración Completa" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Restauración</span>
+            <h3>Restauración Completa</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-4" data-category="post-obra">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80" alt="Post-Obra Premium" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Post-Obra</span>
+            <h3>Entrega Premium</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-5" data-category="airbnb">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=600&q=80" alt="Airbnb Luxe" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Airbnb</span>
+            <h3>Airbnb Luxe</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal-scale stagger-6" data-category="presentacion">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb4b3b2?w=600&q=80" alt="Presentación Corporativa" loading="lazy"/>
+          <div class="portfolio-img-overlay">
+            <span class="portfolio-tag">Presentación</span>
+            <h3>Presentación Corporativa</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- No Results Message -->
+    <div class="portfolio-empty" id="portfolioEmpty" style="display:none;">
+      <p class="body-lg text-center">No se encontraron proyectos en esta categoría.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     BEFORE / AFTER
+     ========================================== -->
+<section class="section" style="background:var(--bg-warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:var(--gap-lg);">
+      <div class="reveal-left">
+        <div class="label-sm">Resultados</div>
+        <h2 class="h2" style="margin-bottom:20px;">
+          Precisión <span class="gold-text italic">antes y después.</span>
+        </h2>
+        <p class="body-lg" style="margin-bottom:32px;">
+          Nuestro proceso de restauración de mármol y superficies porosas utiliza tecnología de vanguardia para recuperar el brillo original.
+        </p>
+        <a href="../../pages/contacto/" class="btn btn-secondary">
+          Solicitar Evaluación
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+      <div class="reveal-right">
+        <div class="before-after-container" id="slider1" style="height:400px;">
+          <div class="image-before" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80')"></div>
+          <div class="image-after" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80')"></div>
+          <div class="slider-handle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CTA
+     ========================================== -->
+<section class="section">
+  <div class="container text-center" style="max-width:640px;">
+    <div class="reveal">
+      <div class="label-sm">¿Listo para empezar?</div>
+      <h2 class="h2" style="margin-bottom:24px;">
+        ¿Quiere resultados <span class="gold-text italic">similares?</span>
+      </h2>
+      <p class="body-lg" style="margin-bottom:40px;">
+        Agende una visita técnica sin costo y descubra cómo podemos transformar su propiedad.
+      </p>
+      <a href="../../pages/contacto/" class="btn btn-primary">
+        Agendar Visita
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-text">
+          Century Clean
+          <span class="nav-logo-dot"></span>
+        </div>
+        <p class="footer-desc">Soluciones premium de administración, mantenimiento y presentación de propiedades en Santo Domingo.</p>
+      </div>
+      <div>
+        <h5 class="footer-heading">Servicios</h5>
+        <ul class="footer-links">
+          <li><a class="footer-link" href="../../pages/administracion/">Administración de Propiedades</a></li>
+          <li><a class="footer-link" href="../../pages/airbnb/">Gestión Airbnb</a></li>
+          <li><a class="footer-link" href="../../pages/servicios/">Limpieza Post-Construcción</a></li>
+          <li><a class="footer-link" href="../../pages/servicios/">Presentación de Propiedades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-heading">Compañía</h5>
+        <ul class="footer-links">
+          <li><a class="footer-link" href="../../pages/nosotros/">Nosotros</a></li>
+          <li><a class="footer-link" href="../../pages/portafolio/">Portafolio</a></li>
+          <li><a class="footer-link" href="../../pages/blog/">Blog</a></li>
+          <li><a class="footer-link" href="../../pages/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="footer-heading">Contacto</h5>
+        <ul class="footer-links">
+          <li><span class="footer-link">info@Centurycleangroup.com</span></li>
+          <li><span class="footer-link">+1 (519) 694-7722</span></li>
+          <li><span class="footer-link" style="font-size:0.82rem;">Santo Domingo, R.D.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2025 Century Clean Group S.R.L.</span>
+      <div style="display:flex;gap:24px;">
+        <a class="footer-link" href="#" style="font-size:0.8rem;">Privacidad</a>
+        <a class="footer-link" href="#" style="font-size:0.8rem;">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/15196947722" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="../../js/global.js"></script>
+</body>
+</html>
