@@ -576,6 +576,139 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ==========================================
+  // SCROLL PROGRESS BAR
+  // ==========================================
+  var scrollProgress = document.getElementById('scrollProgress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', function() {
+      var scrollTop = window.pageYOffset;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+  }
+
+  // ==========================================
+  // CUSTOM CURSOR
+  // ==========================================
+  var customCursor = document.getElementById('customCursor');
+  var cursorDot = document.getElementById('cursorDot');
+  if (customCursor && cursorDot && window.matchMedia('(hover: hover)').matches) {
+    var mouseX = 0, mouseY = 0;
+    var cursorX = 0, cursorY = 0;
+    var dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.12;
+      cursorY += (mouseY - cursorY) * 0.12;
+      dotX += (mouseX - dotX) * 0.25;
+      dotY += (mouseY - dotY) * 0.25;
+      customCursor.style.left = cursorX + 'px';
+      customCursor.style.top = cursorY + 'px';
+      cursorDot.style.left = dotX + 'px';
+      cursorDot.style.top = dotY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover effect on interactive elements
+    var hoverTargets = document.querySelectorAll('a, button, .svc-card, .img-card, .diff-card, .testimonial-card, .faq-question, .before-after-container');
+    hoverTargets.forEach(function(el) {
+      el.addEventListener('mouseenter', function() { customCursor.classList.add('hovering'); });
+      el.addEventListener('mouseleave', function() { customCursor.classList.remove('hovering'); });
+    });
+  }
+
+  // ==========================================
+  // CARD MOUSE TRACKING — Radial glow
+  // ==========================================
+  document.querySelectorAll('.svc-card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) * 100;
+      var y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mouse-x', x + '%');
+      card.style.setProperty('--mouse-y', y + '%');
+    });
+  });
+
+  // ==========================================
+  // PARTICLE SYSTEM — Floating dots in hero
+  // ==========================================
+  var heroEl = document.getElementById('hero');
+  if (heroEl) {
+    var particleCanvas = document.createElement('canvas');
+    particleCanvas.className = 'particle-canvas';
+    heroEl.appendChild(particleCanvas);
+    var ctx = particleCanvas.getContext('2d');
+    var particles = [];
+    var particleCount = 40;
+
+    function resizeCanvas() {
+      particleCanvas.width = heroEl.offsetWidth;
+      particleCanvas.height = heroEl.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    function Particle() {
+      this.x = Math.random() * particleCanvas.width;
+      this.y = Math.random() * particleCanvas.height;
+      this.vx = (Math.random() - 0.5) * 0.3;
+      this.vy = (Math.random() - 0.5) * 0.3;
+      this.radius = Math.random() * 2 + 0.5;
+      this.opacity = Math.random() * 0.5 + 0.1;
+    }
+
+    for (var i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+      particles.forEach(function(p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = particleCanvas.width;
+        if (p.x > particleCanvas.width) p.x = 0;
+        if (p.y < 0) p.y = particleCanvas.height;
+        if (p.y > particleCanvas.height) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 180, 216, ' + p.opacity + ')';
+        ctx.fill();
+      });
+
+      // Draw connecting lines
+      particles.forEach(function(p1, i) {
+        particles.forEach(function(p2, j) {
+          if (i >= j) return;
+          var dx = p1.x - p2.x;
+          var dy = p1.y - p2.y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = 'rgba(0, 180, 216, ' + (0.08 * (1 - dist / 120)) + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+  }
+
   // Console branding
   console.log('%c CCG ', 'background:linear-gradient(135deg,#00B4D8,#0EA5E9);color:#fff;font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;font-family:system-ui;');
 });
