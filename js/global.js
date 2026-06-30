@@ -7,27 +7,42 @@ document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
   // ==========================================
-  // LOADER — Fade out after content loads
+  // LOADER — Cinematic reveal (Apple/Stripe style)
+  // Logo centered for ~2.5s, then smooth exit
   // ==========================================
   var loader = document.getElementById('loader');
   if (loader) {
-    window.addEventListener('load', function() {
+    document.body.style.overflow = 'hidden';
+    var loaderMinTime = 2500; // 2.5 seconds minimum display
+    var loaderStart = Date.now();
+
+    function hideLoader() {
+      var elapsed = Date.now() - loaderStart;
+      var remaining = Math.max(0, loaderMinTime - elapsed);
       setTimeout(function() {
         loader.classList.add('hidden');
+        document.body.style.overflow = '';
         setTimeout(function() {
           loader.style.display = 'none';
-        }, 600);
-      }, 1200);
-    });
-    // Fallback: hide loader after 3s even if load event doesn't fire
+        }, 800);
+      }, remaining);
+    }
+
+    if (document.readyState === 'complete') {
+      hideLoader();
+    } else {
+      window.addEventListener('load', hideLoader);
+    }
+    // Fallback: hide after 5s even if load event doesn't fire
     setTimeout(function() {
       if (!loader.classList.contains('hidden')) {
         loader.classList.add('hidden');
+        document.body.style.overflow = '';
         setTimeout(function() {
           loader.style.display = 'none';
-        }, 600);
+        }, 800);
       }
-    }, 3000);
+    }, 5000);
   }
 
   // ==========================================
